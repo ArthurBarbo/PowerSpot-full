@@ -6,13 +6,13 @@ PowerSpot-full é um projeto Full Stack com **React** no front-end e **Node.js**
 
 ## Deploy
 
-🌐 [Acessar aplicação]()
+🌐 [Acessar aplicação](https://powerspot.allok.in/)
 
 ---
 
 ## Tecnologias
 
-- **Front-end:** React, Vite, CSS, API REST Google maps
+- **Front-end:** React, Vite, React Router, CSS, API REST Google Maps
 - **Back-end:** Node.js, Express, Joi, JWT, MongoDB
 
 ---
@@ -73,3 +73,12 @@ Abra um Pull Request
 ### Licença
 
 Todos os direitos reservados © Arthur Barbosa
+
+### Segredos e Easter Eggs 🕵️‍♂️
+
+O front possui uma rota secreta que você pode acessar para descobrir uma mensagem especial:
+
+Basta digitar https://powerspot.allok.in/secret no navegador.
+lembrando que tem estar logado.
+
+É um pequeno easter egg que adiciona diversão e uma mensagem diretamente a quem testa o projeto 😉

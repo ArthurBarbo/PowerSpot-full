@@ -103,6 +103,32 @@
 }
 
 
+@media (max-width:480px) {
+  .popup-login__title {
+    font-size: 22px;
+    margin-bottom: 30px;
+  }
+
+  .popup-login__input {
+    padding: 8px;
+    font-size: 13px;
+  }
+
+  .popup-login__form {
+    gap: 5px;
+  }
+
+  .popup-login__submit {
+    padding: 9px;
+    font-size: 14px;
+  }
+
+  .popup-login__signup-text {
+    font-size: 13px;
+    margin: 0;
+  }
+}
+
 @keyframes gradientShift {
   0% {
     background-position: 0% 50%;
