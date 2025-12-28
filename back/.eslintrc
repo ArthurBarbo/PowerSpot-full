@@ -1,0 +1,22 @@
+{
+    "env": {
+      "browser": true,
+      "es2021": true
+    },
+    "extends": "airbnb-base",
+    "rules": {
+      "import/extensions": [
+        "error",
+        "ignorePackages",
+        {
+          "js": "always",
+          "jsx": "always"
+        }
+      ],
+      "no-underscore-dangle": "off",
+      "no-console": "off",
+      "linebreak-style": "off",
+      "consistent-return": "off",
+      "import/prefer-default-export": "off"
+    }
+  }

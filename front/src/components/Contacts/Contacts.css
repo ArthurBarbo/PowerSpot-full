@@ -1,0 +1,173 @@
+.contacts {
+  margin: 140px 0 40px 0;
+  display: flex;
+  justify-content: center;
+  padding: 60px 20px;
+
+  background-color: #f5f7fa;
+  background-image: radial-gradient(#6FB8FF 0.7px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+.contacts__subtitle {
+  font-size: 17px;
+  color: #333;
+  background-color: #f3f3f3;
+  padding: 12px 15px;
+  border-left: 4px solid #0077ff;
+  border-radius: 4px;
+  line-height: 24px;
+  margin-bottom: 25px;
+}
+
+.contacts__container {
+  max-width: 600px;
+  width: 100%;
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+
+.contacts__title {
+  font-size: 32px;
+  text-align: center;
+  color: #1F6FBA;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.contacts__form {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+
+.contacts__item {
+  display: flex;
+  flex-direction: column;
+}
+
+.contacts__label {
+  margin-bottom: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+}
+
+.contacts__input {
+  padding: 12px;
+  font-size: 16px;
+  border: 2px solid #6FB8FF;
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.contacts__input:focus {
+  border-color: #1F6FBA;
+}
+
+
+.contacts__input.error,
+.contacts__input:invalid:focus,
+.contacts__input:invalid:focus-visible {
+  border-color: #f44336;
+}
+
+
+.contacts__error {
+  font-size: 14px;
+  color: #f44336;
+  min-height: 18px;
+  margin-top: 5px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.contacts__input:invalid:focus+.contacts__error {
+  opacity: 1;
+}
+
+
+.contacts__textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+
+.contacts__button {
+  padding: 12px;
+  font-size: 18px;
+  background-color: #1F6FBA;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contacts__button:hover {
+  background-color: #0f4d91;
+}
+
+/* Botão desabilitado */
+.contacts__button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.contacts__success {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(90deg, #1F6FBA, #6FB8FF);
+  color: white;
+  padding: 12px 25px;
+  border-radius: 8px;
+  font-size: 16px;
+  z-index: 9999;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  animation: fadeInOut 2s forwards;
+  font-weight: 400;
+}
+
+.contacts__extra {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition:
+    max-height 0.4s ease,
+    opacity 0.3s ease;
+}
+
+.contacts__extra.show {
+  max-height: 200px;
+  /* altura suficiente para o input */
+  opacity: 1;
+}
+
+
+@media (max-width: 600px) {
+  .contacts__container {
+    padding: 30px 20px;
+  }
+
+  .contacts__title {
+    font-size: 28px;
+  }
+
+  .contacts__input,
+  .contacts__textarea {
+    font-size: 15px;
+  }
+
+  .register__button {
+    font-size: 16px;
+  }
+}

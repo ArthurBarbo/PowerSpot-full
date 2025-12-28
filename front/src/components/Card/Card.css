@@ -1,0 +1,117 @@
+.card__content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.card__title {
+  font-size: 17px;
+  display: flex;
+
+
+}
+
+.card__image {
+  width: 44px;
+  height: 77px;
+  object-fit: cover;
+  border-radius: 8px 8px 0 0;
+  margin-bottom: 30px;
+}
+
+.card {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: slideIn 0.9s forwards;
+
+  position: relative;
+
+
+}
+
+.card__save-btn {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: white;
+  border: none;
+  border-radius: 50%;
+  padding: 6px;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card__description {
+  margin-top: 12px;
+  margin-bottom: auto;
+
+
+}
+
+.card__touched {
+  color: #a19c9cd8;
+  margin-top: 40px;
+
+  cursor: pointer;
+}
+
+.card__touched:hover {
+  color: #1F6FBA;
+  transition: 0.4s ease;
+}
+
+
+.card__save-icon {
+  width: 40px;
+  height: 31px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.card__save-icon:hover {
+  transform: scale(1.2);
+
+}
+
+
+
+
+
+
+@media (max-width: 650px) {
+  .card__description {
+    margin-top: 12px;
+
+
+  }
+
+
+  .card__save-btn {
+    position: static;
+    margin-left: 8px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

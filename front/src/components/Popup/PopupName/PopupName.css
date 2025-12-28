@@ -1,0 +1,144 @@
+.popup-edit {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    z-index: 3000;
+}
+
+.popup-edit.open {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Conteúdo do popup */
+.popup-edit__content {
+    background: #ffffff;
+    padding: 25px 30px;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 380px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+    animation: popupOpen 0.35s ease;
+}
+
+@keyframes popupOpen {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Título */
+.popup-edit__title {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #007BFF;
+    text-align: center;
+}
+
+/* Formulário */
+.popup-edit__form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Input */
+.popup-edit__input {
+    font-size: 17px;
+    padding: 10px;
+    border: 2px solid #007BFF;
+    border-radius: 6px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.popup-edit__input:focus {
+    outline: none;
+    border-color: #005FCC;
+}
+
+/* Mensagem de erro */
+.popup-edit__error {
+    color: #FF4D4F;
+    font-size: 14px;
+    margin-top: -10px;
+    margin-bottom: 5px;
+}
+
+/* Botões */
+.popup-edit__buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.popup-edit__save {
+    background: #007BFF;
+    border: none;
+    color: white;
+    font-size: 16px;
+    padding: 10px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+    flex: 1;
+}
+
+.popup-edit__save:hover:not(:disabled) {
+    background: #005FCC;
+}
+
+.popup-edit__save:disabled {
+    background: #a0c4ff;
+    cursor: not-allowed;
+}
+
+.popup-edit__cancel {
+    background: #ccc;
+    border: none;
+    padding: 10px 14px;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+    flex: 1;
+}
+
+.popup-edit__cancel:hover {
+    background: #b6b6b6;
+}
+
+
+@media (max-width: 480px) {
+    .popup-edit__content {
+        padding: 20px;
+    }
+
+    .popup-edit__title {
+        font-size: 20px;
+    }
+
+    .popup-edit__input {
+        font-size: 16px;
+        padding: 8px;
+    }
+
+    .popup-edit__save,
+    .popup-edit__cancel {
+        font-size: 15px;
+        padding: 8px 10px;
+    }
+}
